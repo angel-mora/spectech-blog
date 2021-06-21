@@ -19,18 +19,18 @@ ActiveRecord::Schema.define(version: 2021_06_17_170804) do
     t.string "title"
     t.text "text"
     t.bigint "user_id"
+    t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_articles_on_category_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.text "priority"
-    t.bigint "article_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["article_id"], name: "index_categories_on_article_id"
   end
 
   create_table "users", force: :cascade do |t|

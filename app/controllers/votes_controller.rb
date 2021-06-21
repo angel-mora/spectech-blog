@@ -47,9 +47,9 @@ class VotesController < ApplicationController
 
   # DELETE /votes/1 or /votes/1.json
   def destroy
-    @vote.destroy
+    article.votes.where(user_id: current_user.id).destroy_all
     respond_to do |format|
-      format.html { redirect_to votes_url, notice: 'Vote was successfully destroyed.' }
+      format.html { redirect_to @articles, notice: 'Vote was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
