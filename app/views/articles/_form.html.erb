@@ -21,6 +21,11 @@
     <%= form.text_area :text %>
   </div>
 
+  <div class="field">
+    <%= form.label :category_id, 'Category' %>
+    <%= form.collection_select :category_id, Category.order(:name), :id, :name %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
