@@ -1,0 +1,12 @@
+<h1 class="theme-color">Sign In</h1>
+
+<%= form_with url: sessions_path do |form| %>
+  <div class="field">
+    <%= form.label :name, class: "" %>
+    <%= form.text_field :name, class: "form-control", autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Log In', class: "custom-btn" %>
+  </div>
+<% end %>
