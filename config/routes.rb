@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'articles#index'
+  resources :sessions, only: %w[index create destroy]
   # resources :votes
   resources :categories
   resources :articles do
