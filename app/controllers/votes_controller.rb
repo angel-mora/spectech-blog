@@ -1,5 +1,5 @@
 class VotesController < ApplicationController
-  before_action :set_vote, only: %i[show edit update destroy]
+  before_action :set_current_user
 
   def create
     @vote = @current_user.votes.new(article_id: params[:article_id])

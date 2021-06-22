@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
+  before_action :authenticate_user, except: %i[new create]
 
   def index
     @users = User.all
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
       if @user.save
         session[:id] = @user.id
         session[:name] = @user.name
-        format.html { redirect_to articles_path, notice: 'User was successfully created.' }
+        format.html { redirect_to articles_path, notice: 'User successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }

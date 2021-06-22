@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(name: params[:name])
 
     if @user
-      flash[:notice] = 'You signed in successfully!'
+      flash[:notice] = 'You have signed in!'
       session[:id] = @user.id
       session[:name] = @user.name
       redirect_to articles_path
