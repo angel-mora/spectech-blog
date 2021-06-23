@@ -79,11 +79,12 @@ $white: #fff;
 // Grid Styling
 
 .landing-grid {
-  
+  display: grid;
 }
 
 // Article styling
 .article-title {
+  color: $dark-orange;
   // add some styling
 }
 
