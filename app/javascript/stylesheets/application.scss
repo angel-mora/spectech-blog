@@ -3,12 +3,12 @@ $dark-orange: #da2d08;
 $medium-orange: #f97210;
 $medium-gray: #a1a1a1;
 $dark-gray: #504e4e;
-$light-gray: #dddddd;
+$light-gray: #ddd;
 $wood-gray: #8d7868;
 $white: #fff;
 
 @font-face {
-  font-family:'montserrat';
+  font-family: 'montserrat';
   src: url('../assets/Montserrat-Regular.ttf') format('truetype');
 }
 
@@ -21,23 +21,26 @@ $white: #fff;
 
 // Fonts
 .montserrat {
-  font-family: montserrat;
+  font-family: montserrat, sans-serif;
 }
 
 .bg-linear-gradient {
-  background: repeating-linear-gradient(
-    -55deg,
-    $light-gray,
-    $light-gray 2px,
-    $white 2px,
-    $white 4px
+  background:
+    repeating-linear-gradient(
+      -55deg,
+      $light-gray,
+      $light-gray 2px,
+      $white 2px,
+      $white 4px
     );
 }
 
 // General Settings
 .body {
-  font-family: montserrat;
-  ul,ol {
+  font-family: montserrat, sans-serif;
+
+  ul,
+  ol {
     list-style-type: none;
   }
 }
