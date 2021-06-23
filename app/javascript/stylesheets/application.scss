@@ -52,5 +52,11 @@ $white: #fff;
 }
 
 .simple-list {
-  list-style-type: none;
+  list-style-type: none !important;
+}
+
+.simple-link {
+  text-decoration: none;
+  color: $dark-gray;
+  font-weight: bolder;
 }

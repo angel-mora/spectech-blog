@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
     flash[:alert] = 'Please login!'
     redirect_to sessions_path if session[:id].nil?
   end
-  
+
   def create_categories_buttons
-    @top_categories = Category.order(:priority).limit(4)
+    @top_categories = Category.order(:priority).limit(5)
   end
 end
