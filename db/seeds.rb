@@ -1,4 +1,4 @@
-30.times do
+60.times do
   User.create( name: Faker::Name.name_with_middle )
 end
 
@@ -19,7 +19,7 @@ User.all.each do |author|
   )
 end
 
-21.times do
+60.times do
   rand_usr = User.all.sample
   rand_art = Article.all.sample
   Vote.create( article_id: rand_art.id, user_id: rand_usr.id )

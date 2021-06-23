@@ -9,6 +9,7 @@
     <div class="border bg-dark-orange"></div>
   </div>
 
+  <%# Vote.all.group(:article_id).count.sort_by {|_,value| value}.reverse.to_h %>
   <% @articles.each do |article| %>
     <ul>
       <li><%= article.title %></li>
