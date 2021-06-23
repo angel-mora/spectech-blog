@@ -1,3 +1,42 @@
-@import '~bootstrap/scss/bootstrap'
+// Color variables
+$dark-orange: #da2d08;
+$medium-orange: #f97210;
+$medium-gray: #a1a1a1;
+$light-gray: #dddddd;
+$wood-gray: #8d7868;
+$white: #fff;
 
-// place all scss in here
+@font-face {
+  font-family:'montserrat';
+  src: url('../assets/Montserrat-Regular.ttf') format('truetype');
+}
+
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//
+// Default Style
+//
+
+// Fonts
+.montserrat {
+  font-family: montserrat;
+}
+
+.bg-linear-gradient {
+  background: repeating-linear-gradient(
+    -55deg,
+    $light-gray,
+    $light-gray 2px,
+    $white 2px,
+    $white 4px
+    );
+}
+
+// General Settings
+.body {
+  font-family: montserrat;
+  ul,ol {
+    list-style-type: none;
+  }
+}

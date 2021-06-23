@@ -11,14 +11,15 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <nav class="d-flex w-100 justify-content-end">
-      <ul class="d-flex">
+  <body class="body">
+    <nav class="d-flex w-100 justify-content-between align-items border-bottom h-100">
+      <h1 class="montserrat">SpecTechBlog</h1>
+      <ul class="d-flex border align-items-center">
         <% if @current_user.nil? %>
-          <li><%= link_to 'Log in', sessions_path, class:'mx-2' %></li>
-          <li><%= link_to 'Sign up', new_user_path, class:'mx-2' %></li>
+          <li><%= link_to 'Log in', sessions_path, class:'mr-2' %></li>
+          <li><%= link_to 'Sign up', new_user_path, class:'mr-2' %></li>
         <% else %>
-          <li><% @current_user.name %></li>
+          <li><%= @current_user.name %></li>
         <% end %>
       </ul>
     </nav>
