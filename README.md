@@ -1,39 +1,64 @@
-# Project Name
+# SpecTech Blog
 
-> One paragraph statement about the project.
+> Microverse Capstone project. A Technology blog app with multiple articles, voting features, image uploading and a nice grid layout. DESKTOP APP ONLY.*
 
 ![screenshot](./screenshot.png)
 
-Additional description about the project and its features.
+This project adds markdown rendering to improve writing experience for users.
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+- Ruby 2.7.3
+- Rails 6.1.3
+- PostgreSQL
+- Webpack and Yarn for Javascript
+
+# Featured gems
+
+- Redcarpet
+- Faker
+- FactoryBot
+- Solargraph (for smooth development)
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+Check out the heroku development deployment [here](https://spectech-blog.herokuapp.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### Before Steps
 
-### Setup
+Create a AWS3 key to store your own images in a bucket (for development).
 
-### Install
+Setup the application with the following commands:
+
+```
+bundle install
+```
+
+Then configure and seed the database with:
+
+```
+rails db:create db:migrate db:seed
+```
+
 
 ### Usage
 
-### Run tests
+For local development fire up the server in `localhost:3000` using:
+```
+rails s
+```
+
+### Test the application
+
+You can make sure everything is fine by using the following command:
+```
+rspec
+```
 
 ### Deployment
 
@@ -41,17 +66,10 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Angel Mora**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@angel-mora](https://github.com/angel-mora)
+- Linkedin: [@angelmoradev](https://linkedin.com/angelmoradev)
 
 ## 🤝 Contributing
 
@@ -59,41 +77,19 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
+You can also submit a Pull Request if you have a major feature or fix you'd like to add.
+
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a ⭐️ and share if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks to Microverse!
+- Check out the original design [here](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+- Remember to credit every work you use!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.
+This project is based on [Creative Commons](https://creativecommons.org/licenses/by/2.0/) licensed and inherits from its license.
 
-# SECOND README TO INTEGRATE
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -1,3 +1,77 @@
-@import '~bootstrap/scss/bootstrap'
+// Color variables
+$dark-orange: #da2d08;
+$medium-orange: #f97210;
+$medium-gray: #a1a1a1;
+$dark-gray: #504e4e;
+$light-gray: #ddd;
+$wood-gray: #8d7868;
+$white: #fff;
 
-// place all scss in here
+@font-face {
+  font-family: 'montserrat';
+  src: url('../assets/Montserrat-Regular.ttf') format('truetype');
+}
+
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//
+// Default Style
+//
+
+// Fonts
+.montserrat {
+  font-family: montserrat, sans-serif;
+}
+
+.bg-linear-gradient {
+  background:
+    repeating-linear-gradient(
+      -55deg,
+      $light-gray,
+      $light-gray 2px,
+      $white 2px,
+      $white 4px
+    );
+}
+
+// General Settings
+.body {
+  font-family: montserrat, sans-serif;
+
+  ul,
+  ol {
+    list-style-type: none;
+  }
+}
+
+// Navbar style
+.dark-gray {
+  color: $dark-gray;
+}
+
+.orange-border-bottom {
+  border-bottom: 6px solid $dark-orange !important;
+}
+
+.simple-list {
+  list-style-type: none !important;
+}
+
+.simple-link {
+  text-decoration: none;
+  color: $dark-gray;
+  font-weight: bolder;
+}
+
+.top-rated {
+  background-color: lightblue;
+}
+
+.bg-dark-orange {
+  background-color: $dark-orange;
+}
+
+.bg-medium-orange {
+  background-color: $medium-orange;
+}

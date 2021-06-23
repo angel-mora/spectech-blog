@@ -11,17 +11,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <nav class="d-flex w-100 justify-content-end">
-      <ul class="d-flex">
-        <% if @current_user.nil? %>
-          <li><%= link_to 'Log in', sessions_path, class:'mx-2' %></li>
-          <li><%= link_to 'Sign up', new_user_path, class:'mx-2' %></li>
-        <% else %>
-          <li><% @current_user.name %></li>
-        <% end %>
-      </ul>
-    </nav>
+  <body class="body">
+    <%= render 'shared/nav' %>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,17 @@
+<nav class="d-flex w-100 h-100 justify-content-between align-items orange-border-bottom h-100">
+  <h1><%= link_to 'SpecTechBlog', articles_path, class:'title montserrat dark-gray simple-link' %></h1>
+  <h3><%= link_to 'New Article +', new_article_path, class: 'd-flex align-items-center simple-link mt-2 p-0' %></h3>
+  <%= categories_menu(@top_categories) %>
+
+  <div class="d-flex justify-content-center align-items-center m-0 p-0">
+    <ul class="d-flex align-items-center m-0 p-0">
+      <% if @current_user.nil? %>
+        <li><%= link_to 'Log in', sessions_path, class:'mr-2 simple-link' %></li>
+        <span class="mx-2 font-weight-bold">|</span>
+        <li><%= link_to 'Sign up', new_user_path, class:'mr-2 simple-link' %></li>
+      <% else %>
+        <%= content_tag :li, @current_user.name, class:' mr-4' %>
+      <% end %>
+    </ul>
+  </div>
+</nav>
