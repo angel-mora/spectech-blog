@@ -1,16 +1,19 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="d-flex flex-column">
+    <%= content_tag :h2, @article.title, class: 'article-title' %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+    <%= render partial: "votes" %>
 
-<%= render partial: "votes" %>
+    <% if @article.image.attached? %>
+      <%= image_tag url_for(@article.image), width:'300px' %>
+    <% end %>
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+    <div class="d-flex flex-wrap">
+      <%= content_tag :p, @article.text, class: 'article-text' %>
+    </div>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+    <%= link_to 'Edit', edit_article_path(@article) %>
+    <%= link_to 'Back', articles_path %>
+  </div>
+</div
