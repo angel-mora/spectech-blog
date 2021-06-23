@@ -2,6 +2,7 @@
 $dark-orange: #da2d08;
 $medium-orange: #f97210;
 $medium-gray: #a1a1a1;
+$dark-gray: #504e4e;
 $light-gray: #dddddd;
 $wood-gray: #8d7868;
 $white: #fff;
@@ -39,4 +40,13 @@ $white: #fff;
   ul,ol {
     list-style-type: none;
   }
+}
+
+// Navbar style
+.dark-gray {
+  color: $dark-gray;
+}
+
+.orange-border-bottom {
+  border-bottom: 6px solid $dark-orange !important;
 }

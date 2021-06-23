@@ -12,16 +12,21 @@
   </head>
 
   <body class="body">
-    <nav class="d-flex w-100 justify-content-between align-items border-bottom h-100">
-      <h1 class="montserrat">SpecTechBlog</h1>
-      <ul class="d-flex border align-items-center">
-        <% if @current_user.nil? %>
-          <li><%= link_to 'Log in', sessions_path, class:'mr-2' %></li>
-          <li><%= link_to 'Sign up', new_user_path, class:'mr-2' %></li>
-        <% else %>
-          <li><%= @current_user.name %></li>
-        <% end %>
-      </ul>
+    <nav class="d-flex w-100 justify-content-between align-items orange-border-bottom h-100">
+      <h1 class="montserrat dark-gray">SpecTechBlog</h1>
+
+      <%= render 'layouts/categories_nav' %>
+
+      <div class="d-flex justify-content-center align-items-center m-0 p-0">
+        <ul class="d-flex align-items-center m-0 p-0">
+          <% if @current_user.nil? %>
+            <li><%= link_to 'Log in', sessions_path, class:'mr-2' %></li>
+            <li><%= link_to 'Sign up', new_user_path, class:'mr-2' %></li>
+          <% else %>
+            <%= content_tag :li, @current_user.name, class:' mr-4' %>
+          <% end %>
+        </ul>
+      </div>
     </nav>
     <%= yield %>
   </body>
