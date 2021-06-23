@@ -1,7 +1,10 @@
-<nav class="d-flex w-100 h-100 justify-content-between align-items orange-border-bottom h-100">
+<nav class="d-flex w-100 h-100 justify-content-between align-items orange-border-bottom h-100 px-4">
   <h1><%= link_to 'SpecTechBlog', articles_path, class:'title montserrat dark-gray simple-link' %></h1>
   <h3><%= link_to 'New Article +', new_article_path, class: 'd-flex align-items-center simple-link mt-2 p-0' %></h3>
-  <%= categories_menu(@top_categories) %>
+
+  <div class="d-flex justify-content-around mx-4 px-4">
+    <%= categories_menu(@top_categories) %>
+  </div>
 
   <div class="d-flex justify-content-center align-items-center m-0 p-0">
     <ul class="d-flex align-items-center m-0 p-0">

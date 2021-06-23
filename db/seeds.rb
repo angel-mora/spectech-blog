@@ -13,10 +13,19 @@ User.all.each do |author|
   random = 1 + rand(6)
   Article.create(
     title: Faker::Lorem.sentence(word_count: 3),
-    text: Faker::Lorem.paragraph(sentence_count: 10),
+    text: Faker::Lorem.paragraph(sentence_count: 40),
     category_id: random,
     user_id: author.id
   )
+end
+
+Article.all.each do |art|
+  rand_img = 1 + rand(14)
+  art.image.attach(
+    io: File.open("app/assets/images/#{rand_img}.jpg"),
+    filename: "#{rand_img}.jpg"
+  )
+  art.save
 end
 
 60.times do

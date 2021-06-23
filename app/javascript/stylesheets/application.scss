@@ -75,3 +75,19 @@ $white: #fff;
 .bg-medium-orange {
   background-color: $medium-orange;
 }
+
+// Grid Styling
+
+.landing-grid {
+  display: grid;
+}
+
+// Article styling
+.article-title {
+  color: $dark-orange;
+  // add some styling
+}
+
+.article-text {
+  font-size: 20px;
+}
