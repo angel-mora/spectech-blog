@@ -16,6 +16,6 @@ class ApplicationController < ActionController::Base
   end
   
   def create_categories_buttons
-    @categories_menu = Category.order(:priority).limit(4)
+    @top_categories = Category.order(:priority).limit(4)
   end
 end

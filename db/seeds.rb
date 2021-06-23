@@ -13,7 +13,7 @@ User.all.each do |author|
   random = 1 + rand(6)
   Article.create(
     title: Faker::Lorem.sentence(word_count: 3),
-    text: Faker::Lorem.paragraph(sentence_count: 3),
+    text: Faker::Lorem.paragraph(sentence_count: 10),
     category_id: random,
     user_id: author.id
   )
@@ -22,5 +22,5 @@ end
 21.times do
   rand_usr = User.all.sample
   rand_art = Article.all.sample
-  Vote.create( article_id: rand_art.id, user_id: usr.id )
+  Vote.create( article_id: rand_art.id, user_id: rand_usr.id )
 end
