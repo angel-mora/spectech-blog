@@ -9,8 +9,8 @@
       <%= image_tag url_for(@article.image), width:'300px' %>
     <% end %>
 
-    <div class="d-flex flex-wrap">
-      <%= content_tag :p, @article.text, class: 'article-text' %>
+    <div class="d-flex flex-column">
+      <%= content_tag :p, markdown(@article.text), class: 'article-text' %>
     </div>
 
     <%= link_to 'Edit', edit_article_path(@article) %>
