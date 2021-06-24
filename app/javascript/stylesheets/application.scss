@@ -82,8 +82,21 @@ $white: #fff;
   height: 100vh;
 }
 
-.landing-grid {
+.landing-grid,
+.categories-grid {
   display: grid;
+  grid-template-columns: repeat(4, 25%);
+  height: 100vh;
+  margin-bottom: 0;
+}
+
+.landing-grid {
+  height: 50vh;
+}
+
+.category-articles {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 // Article pages styling

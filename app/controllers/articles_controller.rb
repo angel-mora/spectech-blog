@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    @top = Article.top_article
   end
 
   def show; end

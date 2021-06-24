@@ -23,7 +23,7 @@ module ArticlesHelper
     article.user.name
   end
 
-  def latest_article_background(category)
+  def latest_article_cover(category)
     category.articles.last.image.category_show.url.to_s.html_safe if category.articles.any?
   end
 
