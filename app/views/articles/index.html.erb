@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
 
-<main class="landing-page">
+<main class="landing-page mt-0 pt-0">
+  <p id="notice" class="p-0 m-0"><%= notice %></p>
   <div class="top" style="background-image: url(<%= top_image(@top) %>);">
-    <p class="theme-color feature-title"> <%= top_title_link(@top) %></p>
-    <p class="feature-text"> <%= top_content(@top) %></p>
+    <div class="pt-2">
+      <%= top_title_link(@top) %>
+    </div>
+    <p class="top-text"> <%= top_content(@top) %></p>
   </div>
 
   <div class="landing-grid">

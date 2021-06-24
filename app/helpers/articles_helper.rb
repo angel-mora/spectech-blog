@@ -4,7 +4,7 @@ module ArticlesHelper
   end
 
   def top_image(article)
-    article.try(:image)
+    url_for(article.try(:image).blob)
   end
 
   def top_content(article)
@@ -24,11 +24,16 @@ module ArticlesHelper
   end
 
   def latest_article_cover(category)
-    # binding.pry
-    category.articles.last.image if category.articles.any?
+    unless category.try(:articles).nil?
+      # binding.pry
+      #image_key = category.articles.last.image.key
+      #ActiveStorage::Blob.service.path_for(image_key) #if category.articles.any?
+      img_blob = category.articles.last.image.blob
+      url_for(img_blob)
+    end
   end
 
   def top_title_link(article)
-    link_to(top_title(article), article_path(article), class: 'link-title underline') if article
+    link_to(top_title(article), article_path(article), class: 'simple-link top-title m-2 p-2') if article
   end
 end
