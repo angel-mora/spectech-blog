@@ -8,7 +8,7 @@ module ArticlesHelper
   end
 
   def top_content(article)
-    article.try { |a| a.text.truncate(100, separator: ' ', omission: 'Read more...') }
+    article.try { |a| a.text.truncate(100, separator: ' ', omission: '... Read more') }
   end
 
   def number_of_comments(article)
@@ -24,13 +24,10 @@ module ArticlesHelper
   end
 
   def latest_article_cover(category)
-    unless category.try(:articles).nil?
-      # binding.pry
-      #image_key = category.articles.last.image.key
-      #ActiveStorage::Blob.service.path_for(image_key) #if category.articles.any?
-      img_blob = category.articles.last.image.blob
-      url_for(img_blob)
-    end
+    return if category.try(:articles).nil?
+
+    img_blob = category.articles.last.image.blob
+    url_for(img_blob)
   end
 
   def top_title_link(article)
