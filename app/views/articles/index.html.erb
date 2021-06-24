@@ -1,21 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row m-0 p-0">
-  <div class="col-9 h-100">
-    <div class="border bg-dark-orange"></div>
+<main class="landing-page">
+  <div class="top" style="background-image: url(<%= top_image(@featured) %>);">
+    <p class="theme-color feature-title"> <%= top_title_link(@featured) %></p>
+    <p class="feature-text"> <%= top_content(@featured) %></p>
   </div>
 
-  <div class='col-3 h-100'>
-    <div class="border bg-dark-orange"></div>
+  <div class="landing-grid">
+    <% @categories.each do |category| %>
+      <div class='category'
+            style="background-image: url(<%= latest_article_background(category) %>);">
+        <p> <%= link_to category.name, category_path(category) %></p>
+        <span> <%= category_article_link(category) %></span>
+      </div>
+    <% end %>
   </div>
 
-  <%# Vote.all.group(:article_id).count.sort_by {|_,value| value}.reverse.to_h %>
-  <% @articles.each do |article| %>
-    <ul>
-      <li><%= article.title %></li>
-      <li><%= article.text %></li>
-      <li><%= link_to 'Show', article %></li>
-    </ul>
-  <% end %>
-
-</div>
+</main>
