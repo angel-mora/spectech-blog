@@ -4,6 +4,8 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    @top = Article.top_article
+    @categories = Category.order(:priority).limit(4).includes(:articles)
   end
 
   def show; end

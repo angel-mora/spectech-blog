@@ -59,9 +59,9 @@ $white: #fff;
 }
 
 .simple-link {
-  text-decoration: none;
-  color: $dark-gray;
-  font-weight: bolder;
+  text-decoration: none !important;
+  color: $dark-gray !important;
+  font-weight: bolder !important;
 }
 
 .top-rated {
@@ -78,11 +78,28 @@ $white: #fff;
 
 // Grid Styling
 
-.landing-grid {
-  display: grid;
+.landing-page {
+  height: 100vh;
 }
 
-// Article styling
+.landing-grid,
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  height: 100vh;
+  margin-bottom: 0;
+}
+
+.landing-grid {
+  height: 50vh;
+}
+
+.category-articles {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Article pages styling
 .article-title {
   color: $dark-orange;
   // add some styling
@@ -90,4 +107,29 @@ $white: #fff;
 
 .article-text {
   font-size: 20px;
+}
+
+.top {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.top-title {
+  font-size: 24px;
+  padding: 20px;
+  color: $white !important;
+  text-decoration: none !important;
+}
+
+.category-style {
+  font-weight: bolder;
+  margin: 10px;
+  padding: 10px;
+  color: $white !important;
+}
+
+.top-text {
+  color: $white;
+  font-size: 18px;
 }

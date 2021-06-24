@@ -1,21 +1,22 @@
-<p id="notice"><%= notice %></p>
 
-<div class="row m-0 p-0">
-  <div class="col-9 h-100">
-    <div class="border bg-dark-orange"></div>
+<main class="landing-page mt-0 pt-0">
+  <p id="notice" class="p-0 m-0"><%= notice %></p>
+  <div class="top" style="background-image: linear-gradient(rgba(232, 199, 192,.2), rgba(232, 199, 192,.2)), url(<%= top_image(@top) %>);">
+    <div class="pt-2">
+      <%= top_title_link(@top) %>
+    </div>
+    <p class="top-text m-3 p-3"><%= top_content(@top) %></p>
   </div>
 
-  <div class='col-3 h-100'>
-    <div class="border bg-dark-orange"></div>
+  <div class="landing-grid">
+    <% @categories.each do |category| %>
+      <div class='category-articles'
+            style="background-image: linear-gradient(rgba(232, 199, 192,.1), rgba(232, 199, 192,.1)), url(<%= latest_article_cover(category) %>);">
+        <div class="d-flex flex-column">
+          <%= link_to category.name, category_path(category), class:'category-style pt-2 simple-link text-uppercase' %>
+          <span><%= article_by_category(category) %></span>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <%# Vote.all.group(:article_id).count.sort_by {|_,value| value}.reverse.to_h %>
-  <% @articles.each do |article| %>
-    <ul>
-      <li><%= article.title %></li>
-      <li><%= article.text %></li>
-      <li><%= link_to 'Show', article %></li>
-    </ul>
-  <% end %>
-
-</div>
+</main>
