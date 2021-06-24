@@ -24,7 +24,8 @@ module ArticlesHelper
   end
 
   def latest_article_cover(category)
-    category.articles.last.image.category_show.url.to_s.html_safe if category.articles.any?
+    # binding.pry
+    category.articles.last.image if category.articles.any?
   end
 
   def top_title_link(article)
