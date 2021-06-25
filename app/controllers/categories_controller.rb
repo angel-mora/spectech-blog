@@ -6,7 +6,9 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
-  def show; end
+  def show
+    @categories = @category.articles
+  end
 
   def new
     @category = Category.new
