@@ -11,10 +11,6 @@ module ArticlesHelper
     article.try { |a| a.text.truncate(100, separator: ' ', omission: '... Read more') }
   end
 
-  def number_of_comments(article)
-    pluralize(article.comments.size, 'comment')
-  end
-
   def number_of_votes(article)
     pluralize(article.votes.size, 'vote')
   end
