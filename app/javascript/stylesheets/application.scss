@@ -144,7 +144,7 @@ $white: #fff;
 }
 
 .bg-cover {
-  background-size: cover;
+  object-fit: cover;
   // height: auto;
 }
 

@@ -4,8 +4,14 @@
     <div class="col-3 m-0 p-0">
       <%= top_img(cat,i) %>
       <div class="half">
-        <%= link_to cat.title %>
-        <%= link_to 'Read more', cat, class:'' %>
+        <div class="d-flex flex-column">
+          <div class="d-flex m-2 p-2 flex-column">
+            <%= content_tag :p, @category.name %>
+            <%= content_tag :h2, cat.title %>
+            <%= read_more(cat) %>
+            <%= link_to 'Read more', cat, class:'' %>
+          </div>
+        </div>
       </div>
       <%= bottom_img(cat,i) %>
     </div>
