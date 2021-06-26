@@ -45,7 +45,6 @@ Then configure and seed the database with:
 rails db:create db:migrate db:seed
 ```
 
-
 ### Usage
 
 For local development fire up the server in `localhost:3000` using:
