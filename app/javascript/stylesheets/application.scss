@@ -85,12 +85,8 @@ $white: #fff;
 .landing-grid {
   display: grid;
   grid-template-columns: repeat(4, 25%);
-  height: 100vh;
-  margin-bottom: 0;
-}
-
-.landing-grid {
   height: 50vh;
+  margin-bottom: 0;
 }
 
 .category-articles {
