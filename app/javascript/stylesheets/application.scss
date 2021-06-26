@@ -82,8 +82,7 @@ $white: #fff;
   height: 100vh;
 }
 
-.landing-grid,
-.categories-grid {
+.landing-grid {
   display: grid;
   grid-template-columns: repeat(4, 25%);
   height: 100vh;
@@ -132,4 +131,23 @@ $white: #fff;
 .top-text {
   color: $white;
   font-size: 18px;
+}
+
+// Categories styling
+
+.categories-container {
+  height: 94vh;
+}
+
+.half {
+  height: 50vh;
+}
+
+.bg-cover {
+  background-size: cover;
+  // height: auto;
+}
+
+.w-25vw {
+  width: 25vw;
 }
