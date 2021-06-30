@@ -4,7 +4,9 @@ RSpec.describe Vote, type: :model do
   context 'associations' do
     it 'requires an article and a user to be valid' do
       author = create(:random_user)
-      article = create(:random_article, user_id: author.id)
+      category = create(:category, name: 'Python', priority: 1)
+      article = create(:random_article, user_id: author.id, category_id: category.id)
+      # byebug
       vote = build(:vote, user_id: author.id, article_id: article.id)
       expect(vote).to be_valid
     end
