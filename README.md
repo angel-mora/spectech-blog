@@ -1,6 +1,6 @@
 # SpecTech Blog
 
-> Microverse Capstone project. A Technology blog app with multiple articles, voting features, image uploading, and a nice grid layout. DESKTOP APP ONLY.*
+> Microverse Capstone project! A Technology blog app with multiple articles, voting features, image uploading, and a nice grid layout. DESKTOP APP ONLY.*
 
 ![screenshot](./screenshot.png)
 
