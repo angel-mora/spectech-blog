@@ -4,7 +4,8 @@ RSpec.describe Article, type: :model do
   context 'associations' do
     it 'ensures presence of title and text' do
       author = create(:random_user)
-      article = build(:random_article, user_id: author.id)
+      category = create(:category, name: 'Python', priority: 1)
+      article = build(:random_article, user_id: author.id, category_id: category.id)
       expect(article.save).to eq(true)
     end
     it 'require presence of title and text' do

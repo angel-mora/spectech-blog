@@ -1,10 +1,10 @@
 # SpecTech Blog
 
-> Microverse Capstone project. A Technology blog app with multiple articles, voting features, image uploading and a nice grid layout. DESKTOP APP ONLY.*
+> Microverse Capstone project. A Technology blog app with multiple articles, voting features, image uploading, and a nice grid layout. DESKTOP APP ONLY.*
 
 ![screenshot](./screenshot.png)
 
-This project adds markdown rendering to improve writing experience for users.
+This project adds markdown rendering to improve the writing experience for users.
 
 ## Built With
 
@@ -22,7 +22,7 @@ This project adds markdown rendering to improve writing experience for users.
 
 ## Live Demo
 
-Check out the heroku development deployment [here](https://spectech-blog.herokuapp.com)
+Check out the Heroku development deployment [here](https://spectech-blog.herokuapp.com)
 
 
 ## Getting Started
@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Before Steps
 
-Create a AWS3 key to store your own images in a bucket (for development).
+Create an AWS3 key to store your images in a bucket (for development).
 
 Setup the application with the following commands:
 
@@ -44,7 +44,6 @@ Then configure and seed the database with:
 ```
 rails db:create db:migrate db:seed
 ```
-
 
 ### Usage
 
@@ -73,7 +72,7 @@ rspec
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
@@ -92,4 +91,3 @@ Give a ⭐️ and share if you like this project!
 ## 📝 License
 
 This project is based on [Creative Commons](https://creativecommons.org/licenses/by/2.0/) licensed and inherits from its license.
-
