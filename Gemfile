@@ -33,7 +33,7 @@ gem 'redcarpet', '~> 3.5.1'
 
 gem 'faker', '~> 2.18'
 
-gem 'aws-sdk-s3', '~> 1.96', '>= 1.96.1'
+gem 'aws-sdk-s3', '~> 1.96', '>= 1.96.1' #require: false
 
 gem 'figaro', '~> 1.2.0'
 
