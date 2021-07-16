@@ -13,11 +13,11 @@ postgres = Category.create(name: 'postgres', priority: 6)
 
 User.all.each do |author|
   random = 1 + rand(6)
-  Article.create(
+  Article.create!(
     title: Faker::Lorem.sentence(word_count: 3),
     text: Faker::Lorem.paragraph(sentence_count: 40),
     category_id: random,
-    user_id: author.id
+    author_id: author.id
   )
 end
 
@@ -34,5 +34,5 @@ end
 60.times do
   rand_usr = User.all.sample
   rand_art = Article.all.sample
-  Vote.create( article_id: rand_art.id, user_id: rand_usr.id )
+  Vote.create( article_id: rand_art.id, author_id: rand_usr.id )
 end
