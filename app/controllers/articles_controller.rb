@@ -8,13 +8,23 @@ class ArticlesController < ApplicationController
     @categories = Category.order(:priority).limit(4).includes(:articles)
   end
 
-  def show; end
+  def show;end
 
   def new
     @article = Article.new
   end
 
-  def edit; end
+  def edit
+    unless @current_user == @article.author
+      redirect_to article_path, notice: 'Seems like this article does not belong to you!'
+    end
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
+  end
 
   def create
     @article = @current_user.articles.build(article_params)

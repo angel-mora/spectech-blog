@@ -19,7 +19,6 @@
 - [ ] I should not be able to vote more than 1
 - [ ] Only the user that creates the article should be able to edit it. Currently, any user can edit your posts
 - [ ] Use RESTFUL routes, for example, the category you do not need all of them because the user does not have the possibility to create a new article
-- [ ] User should be able to sign out
 - [ ] Your page extends too much to the right.
 - [ ] Any user is able to edit any post even without logging in, the only user to edit a post should be a user who created the same article.
 - [ ] Any user can create a post even before login, this should not be the case, only a logged-in user should have access to the create article form.
@@ -32,3 +31,4 @@
 - [ ] Please use assets pipeline located `app/assets/stylesheets for all of your CSS stylesheets.
 - [ ] I would suggest to give more styling to the form that creates articles
 - [ ] Views should be completely separate from app logic. You can move all view-related logic to app/helpers.
+- [X] User should be able to sign out

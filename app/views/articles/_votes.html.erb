@@ -1,5 +1,5 @@
-<%# if !current_user.nil? %>
+<% if @current_user %>
   <%#= link_to "Remove vote", article_vote_path(@article), method: :delete %>
 <%# else %>
   <%= link_to "Vote", article_vote_path(@article), method: :post %>
-<%# end %>
+<% end %>
