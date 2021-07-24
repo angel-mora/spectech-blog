@@ -37,6 +37,8 @@ gem 'aws-sdk-s3', '~> 1.96', '>= 1.96.1', require: false
 
 gem 'figaro', '~> 1.2.0'
 
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

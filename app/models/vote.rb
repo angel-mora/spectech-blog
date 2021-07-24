@@ -1,5 +1,5 @@
 class Vote < ApplicationRecord
-  belongs_to :user
+  belongs_to :author, class_name: 'User'
   belongs_to :article
 
   def vote_button(article)
