@@ -37,7 +37,6 @@ yarn-debug.log*
 
 # Ignore package-lock to prevent issues with GH Actions
 package-lock.json
-todos.org
 
 # Ignore application.yml for Figaro
 config/application.yml
