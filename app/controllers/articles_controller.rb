@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
     @categories = Category.order(:priority).limit(4).includes(:articles)
   end
 
-  def show;end
+  def show; end
 
   def new
     @article = Article.new

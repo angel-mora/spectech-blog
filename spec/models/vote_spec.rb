@@ -5,9 +5,7 @@ RSpec.describe Vote, type: :model do
     it 'requires an article and a user to be valid' do
       author = create(:random_user)
       category = create(:category, name: 'Python', priority: 1)
-      byebug
       article = create(:random_article, author_id: author.id, category_id: category.id)
-      # byebug
       vote = build(:vote, author_id: author.id, article_id: article.id)
       expect(vote).to be_valid
     end
