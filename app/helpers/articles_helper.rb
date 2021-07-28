@@ -1,5 +1,5 @@
 module ArticlesHelper
-  def top_title(article)
+  def top_title(_category, article)
     article.try(:title)
   end
 
@@ -26,7 +26,10 @@ module ArticlesHelper
     url_for(img_blob)
   end
 
-  def top_title_link(article)
-    link_to(top_title(article), article_path(article), class: 'simple-link top-title m-2 p-2') if article
+  def top_title_link(category, article)
+    if article
+      link_to(top_title(category, article), category_article_path(category, article),
+              class: 'simple-link top-title m-2 p-2')
+    end
   end
 end

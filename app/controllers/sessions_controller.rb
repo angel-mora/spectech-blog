@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       flash[:notice] = 'You have signed in!'
       session[:id] = @user.id
       session[:name] = @user.name
-      redirect_to articles_path
+      redirect_to category_articles_path(@category)
     else
       flash[:alert] = 'No User found. Please sign up'
       redirect_to new_user_path
