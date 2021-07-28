@@ -4,7 +4,7 @@ module CategoriesHelper
 
     link_title = category.articles.pluck(:title).last.truncate(19)
     article = category.articles.last
-    link_to(link_title, article_path(article), class: 'simple-link top-title m-2 p-2')
+    link_to(link_title, category_article_path(category, article), class: 'simple-link top-title m-2 p-2')
   end
 
   def top_img(art, idx)

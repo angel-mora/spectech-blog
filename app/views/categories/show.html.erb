@@ -9,7 +9,7 @@
             <%= content_tag :p, @category.name %>
             <%= content_tag :h2, cat.title %>
             <%= read_more(cat) %>
-            <%= link_to 'Read more', cat, class:'' %>
+            <%= link_to 'Read more', category_article_path(@category, cat), class:'' %>
           </div>
         </div>
       </div>

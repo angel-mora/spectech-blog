@@ -5,10 +5,13 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
     @top = Article.top_article
+    @category = @top.category
     @categories = Category.order(:priority).limit(4).includes(:articles)
   end
 
-  def show; end
+  def show
+    @category = @article.category
+  end
 
   def new
     @article = Article.new
@@ -16,7 +19,7 @@ class ArticlesController < ApplicationController
 
   def edit
     unless @current_user == @article.author
-      redirect_to article_path, notice: 'Seems like this article does not belong to you!'
+      redirect_to category_article_path, notice: 'Seems like this article does not belong to you!'
     end
 
     if @article.update(article_params)

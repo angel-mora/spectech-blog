@@ -1,5 +1,5 @@
 <% if @current_user %>
-  <%#= link_to "Remove vote", article_vote_path(@article), method: :delete %>
+  <%#= link_to "Remove vote", category_article_vote_path(@category, @article), method: :delete %>
 <%# else %>
-  <%= link_to "Vote", article_vote_path(@article), method: :post %>
+  <%= link_to "Vote", category_article_vote_path(@category, @article), method: :post %>
 <% end %>

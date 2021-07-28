@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       if @user.save
         session[:id] = @user.id
         session[:name] = @user.name
-        format.html { redirect_to articles_path, notice: 'User successfully created.' }
+        format.html { redirect_to category_articles_path(@category), notice: 'User successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }
