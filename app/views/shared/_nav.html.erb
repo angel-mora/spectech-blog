@@ -1,6 +1,13 @@
 <nav class="d-flex w-100 h-100 justify-content-between align-items orange-border-bottom h-100 px-4 mb-0 pb-0">
   <h1><%= link_to 'SpecTechBlog', root_path, class:'title montserrat dark-gray simple-link' %></h1>
-  <h3><%= link_to 'New Article +', new_category_article_path(@category), class: 'd-flex align-items-center simple-link mt-2 p-0' %></h3>
+  <% if @current_user %>
+    
+    <% if category_path(@category) %>
+      <h3><%= link_to 'New Article +', new_category_article_path(@category), class: 'd-flex align-items-center simple-link mt-2 p-0' %></h3>
+    <% else %>
+      <%= content_tag :p, 'Register!' %>
+    <% end %>
+  <% end %>
 
   <div class="d-flex justify-content-around mx-4 px-4">
     <%= categories_menu(@top_categories) %>

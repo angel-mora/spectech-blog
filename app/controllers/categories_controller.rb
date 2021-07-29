@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
 
   def show
     @categories = @category.articles.limit(4)
+    @category = Category.find(category_params[:id])
   end
 
   def new
@@ -57,6 +58,6 @@ class CategoriesController < ApplicationController
   end
 
   def category_params
-    params.require(:category).permit(:name, :priority)
+    params.require(:category).permit(:id, :name, :priority)
   end
 end

@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
     @top = Article.top_article
     @category = @top.category
     @categories = Category.order(:priority).limit(4).includes(:articles)
+    @current_category = Category.find(params[:id]) unless params[:id].nil? 
   end
 
   def show
@@ -15,6 +16,8 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @top = Article.top_article
+    @category = @top.category
   end
 
   def edit
@@ -31,14 +34,14 @@ class ArticlesController < ApplicationController
 
   def create
     # binding.pry
-    # @article = Article.find(params[:article_id])
-    # @comment = @category.articles.create(comment_params)
+    #@article = Article.find(params[:article_id])
+    # @category = @category.articles.create(comment_params)
     # redirect_to article_path(@article)
-
-    @article = @current_user.articles.build(article_params)
+    @art_builded = Article.new(title: article_params[:title], text: article_params[:text], author_id: @current_user.id, category_id: @current_category)
+    #@article = @current_user.articles.build(article_params) # Article.new
 
     respond_to do |format|
-      if @article.save
+      if @art_builded.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
