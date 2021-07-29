@@ -7,6 +7,11 @@ module CategoriesHelper
     link_to(link_title, category_article_path(category, article), class: 'simple-link top-title m-2 p-2')
   end
 
+  def rand_category
+    @rand_cat = rand(1...6)
+    @rand_cat
+  end
+
   def top_img(art, idx)
     img = ''
     img << image_tag(url_for(art.image.blob), class: 'half w-25vw bg-cover')

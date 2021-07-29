@@ -30,6 +30,11 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    # binding.pry
+    # @article = Article.find(params[:article_id])
+    # @comment = @category.articles.create(comment_params)
+    # redirect_to article_path(@article)
+
     @article = @current_user.articles.build(article_params)
 
     respond_to do |format|
@@ -70,6 +75,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :text, :category_id, :image)
+    params.require(:article).permit(:title, :text, :category_id, :image, :author_id)
   end
 end
