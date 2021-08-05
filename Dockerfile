@@ -11,6 +11,7 @@ RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
 
+# Copy every file from current directory into the image
 COPY . /spectech/
 
 # Configure the main process to run when running the image
