@@ -1,5 +1,4 @@
 module CategoriesHelper
-
   def article_by_category(category)
     return unless category.articles.any?
 
