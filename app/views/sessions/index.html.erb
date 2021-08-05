@@ -1,0 +1,14 @@
+<div class="container w-25">
+  <h1 class="">Sign In</h1>
+
+  <%= form_with url: sessions_path do |form| %>
+    <div class="field">
+      <%= form.label :name, class: "" %>
+      <%= form.text_field :name, class: "form-control", autofocus: true %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Log In', class: "btn btn-success mt-4" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,149 @@
+// Color variables
+$dark-orange: #da2d08;
+$medium-orange: #f97210;
+$medium-gray: #a1a1a1;
+$dark-gray: #504e4e;
+$light-gray: #ddd;
+$wood-gray: #8d7868;
+$white: #fff;
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('../assets/Montserrat-Regular.ttf') format('truetype');
+}
+
+// Import Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//
+// Default Style
+//
+
+// Fonts
+.montserrat {
+  font-family: montserrat, sans-serif;
+}
+
+.bg-linear-gradient {
+  background:
+    repeating-linear-gradient(
+      -55deg,
+      $light-gray,
+      $light-gray 2px,
+      $white 2px,
+      $white 4px
+    );
+}
+
+// General Settings
+.body {
+  font-family: montserrat, sans-serif;
+
+  ul,
+  ol {
+    list-style-type: none;
+  }
+}
+
+// Navbar style
+.dark-gray {
+  color: $dark-gray;
+}
+
+.orange-border-bottom {
+  border-bottom: 6px solid $dark-orange !important;
+}
+
+.simple-list {
+  list-style-type: none !important;
+}
+
+.simple-link {
+  text-decoration: none !important;
+  color: $dark-gray !important;
+  font-weight: bolder !important;
+}
+
+.top-rated {
+  background-color: lightblue;
+}
+
+.bg-dark-orange {
+  background-color: $dark-orange;
+}
+
+.bg-medium-orange {
+  background-color: $medium-orange;
+}
+
+// Grid Styling
+
+.landing-page {
+  height: 100vh;
+}
+
+.landing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  height: 50vh;
+  margin-bottom: 0;
+}
+
+.category-articles {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// Article pages styling
+.article-title {
+  color: $dark-orange;
+  // add some styling
+}
+
+.article-text {
+  font-size: 20px;
+}
+
+.top {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.top-title {
+  font-size: 24px;
+  padding: 20px;
+  color: $white !important;
+  text-decoration: none !important;
+}
+
+.category-style {
+  font-weight: bolder;
+  margin: 10px;
+  padding: 10px;
+  color: $white !important;
+}
+
+.top-text {
+  color: $white;
+  font-size: 18px;
+}
+
+// Categories styling
+
+.categories-container {
+  height: 94vh;
+}
+
+.half {
+  height: 50vh;
+}
+
+.bg-cover {
+  object-fit: cover;
+  // height: auto;
+}
+
+.w-25vw {
+  width: 25vw;
+}

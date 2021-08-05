@@ -1,0 +1,17 @@
+require 'rails_helper'
+
+RSpec.describe Article, type: :model do
+  context 'associations' do
+    it 'ensures presence of title and text' do
+      author = create(:random_user)
+      category = create(:category, name: 'Python', priority: 1)
+      article = build(:random_article, author_id: author.id, category_id: category.id)
+      expect(article.save).to eq(true)
+    end
+    it 'require presence of title and text' do
+      author = build(:random_user)
+      article = build(:random_article, title: nil, text: nil, author_id: author.id)
+      expect(article).to_not be_valid
+    end
+  end
+end
