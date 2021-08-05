@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = @current_user.articles.build(article_params)
+    @article = Article.new(article_params)
 
     respond_to do |format|
       if @article.save
@@ -67,6 +67,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :text, :category_id, :image)
+    params.require(:article).permit(:title, :text, :category_id, :image).merge(author_id: @current_user.id)
   end
 end
