@@ -20,10 +20,13 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV['SPECTECH_BLOG_DATABASE_HOST'] || "localhost" %>
+  username: <%= ENV['SPECTECH_BLOG_DATABASE_USER'] || "spectech_blog" %>
+  password: <%= ENV['SPECTECH_BLOG_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
-  database: spectech_blog_development
+  database: <%= ENV['SPECTECH_BLOG_DATABASE_NAME'] || "spectech_blog_development" %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,6 +84,4 @@ test:
 #
 production:
   <<: *default
-  database: spectech_blog_production
-  username: spectech_blog
-  password: <%= ENV['SPECTECH_BLOG_DATABASE_PASSWORD'] %>
+  database: <%= ENV['SPECTECH_BLOG_DATABASE_NAME'] || "spectech_blog_production" %>

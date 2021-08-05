@@ -1,0 +1,4 @@
+# Aquí archivos que no se deben copiar adentro de la imágen Docker
+./storage
+./log
+./tmp
