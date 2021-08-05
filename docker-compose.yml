@@ -13,9 +13,13 @@ services:
     environment:
       BUCKETEER_AWS_ACCESS_KEY_ID: CHANGE_ME
       BUCKETEER_AWS_SECRET_ACCESS_KEY: CHANGE_ME
-      BUCKETEER_AWS_REGION: CHANGE_ME
+      BUCKETEER_AWS_REGION: us-east-1
       BUCKETEER_BUCKET_NAME: CHANGE_ME
+      SPECTECH_BLOG_DATABASE_HOST: db
+      SPECTECH_BLOG_DATABASE_NAME: spectech_blog
+      SPECTECH_BLOG_DATABASE_USER: spectech_blog
       SPECTECH_BLOG_DATABASE_PASSWORD: CHANGE_ME
+      # RAILS_ENV: development
 
   db:
     image: kartoza/postgis:13-3.1
@@ -24,7 +28,7 @@ services:
       # - dbbackups:/backups
     environment:
       # If you need to create multiple database you can add coma separated databases eg gis,data
-      - POSTGRES_DB=gis,spectech_blog_production
+      - POSTGRES_DB=gis,spectech_blog
       - POSTGRES_USER=spectech_blog
       - POSTGRES_PASS=CHANGE_ME
       - ALLOW_IP_RANGE=0.0.0.0/0
